@@ -1,3 +1,7 @@
+#!/bin/bash
+
+echo "Server : "$(hostname -f)
+
 ncpu=$(( $(cat /proc/cpuinfo |grep "physical id"|tail -n 1|sed 's/.*: //') + 1 ))
 cpumodel=$(cat /proc/cpuinfo |grep "model name"|head -n 1|sed 's/.*CPU //')
 cpucores=$(cat /proc/cpuinfo |grep "cpu cores"|head -n 1|sed 's/.*: //')
