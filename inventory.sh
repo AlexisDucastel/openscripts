@@ -16,4 +16,5 @@ do
   echo "DSK = SATA $d $type $capacity"
 done 
 
-echo "IPLIST = $(ip a|grep "inet " | awk '{print $2}')"
+iplist=$(ip a|grep "inet " | awk '{print $2}')
+echo "IPLIST = $iplist"
